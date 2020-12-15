@@ -50,7 +50,7 @@ const initilizeApp = () => {
             document.querySelector('.current-user-name').textContent = user.displayName;
             getDataFromDatabase();
         } else {
-            window.open('../pages/auth.html',"_self");
+            window.open('../auth.html',"_self");
         }
       });
 }
