@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Work Tasks</title>
+        <link rel="stylesheet" href="../styles/main.css" type="text/css"/>
+    </head>
+
+    <body onload="initilizeApp()">
+        <div class="app-spinner hide">
+            <!--
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transaprent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <defs>
+                    <mask id="ldio-l94j0p085q-mask">
+                    <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                        <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                    </mask>
+                    </defs>
+                    <g mask="url(#ldio-l94j0p085q-mask)"><rect x="20.5" y="0" width="59" height="100" fill="#7a7a7a">
+                    <animate attributeName="fill" values="#7a7a7a" times="0" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                    </rect></g>
+                </svg>
+            -->
+            <!--
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transaprent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <defs>
+                    <mask id="ldio-l94j0p085q-mask">
+                    <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                        <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                    </mask>
+                    </defs>
+                    <g mask="url(#ldio-l94j0p085q-mask)"><rect x="20.5" y="0" width="59" height="100" fill="#464646">
+                    <animate attributeName="fill" values="#464646" times="0" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                    </rect></g>
+                </svg>
+            -->
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background-color: #fff00;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <defs>
+                 <mask id="ldio-tjol6e6adzc-mask">
+                   <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                     <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                   </circle>
+                 </mask>
+                </defs>
+                <g mask="url(#ldio-tjol6e6adzc-mask)"><rect x="20.5" y="0" width="12.6" height="100" fill="#e15b64">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.8s"></animate>
+                </rect><rect x="32.1" y="0" width="12.6" height="100" fill="#f47e60">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.6s"></animate>
+                </rect><rect x="43.7" y="0" width="12.6" height="100" fill="#f8b26a">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.4s"></animate>
+                </rect><rect x="55.3" y="0" width="12.6" height="100" fill="#abbd81">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.2s"></animate>
+                </rect><rect x="66.9" y="0" width="12.6" height="100" fill="#849b87">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                </rect></g>
+            </svg>
+        
+        </div>
+        <header class='login'>
+            <div class="app-name">flick</div>
+            <div class="user-name current-user-name"></div>
+            <button class="btn btn-neutral" onclick="signOut()">Sign out</button>
+        </header>
+        <header class="app">
+            <input type="text" class="new-task-input" placeholder="Enter New Task" onkeyup="createNewTask(event)"/>
+        </header>
+        <div class="filter-container">
+            <fieldset>
+                <input type="radio" value="ALL" name="taskfilter" onchange="doFilter('TASK',event.target.value)">
+                <label for="filterValue">All</label>
+                <input type="radio" value="NC" name="taskfilter" onchange="doFilter('TASK',event.target.value)">
+                <label for="filterValue">Not Completed</label>
+            </fieldset>
+            <fieldset>
+                <input type="radio" value="WORK_TASK" name="listfilter" onchange="doFilter('LIST',event.target.value)">
+                <label for="filterValue">Work</label>
+                <input type="radio" value="PERSONAL_TASK" name="listfilter" onchange="doFilter('LIST',event.target.value)">
+                <label for="filterValue">Personal</label>
+            </fieldset>
+        </div>
+        <div class="task-container">
+            <ul>
+                
+            </ul>
+        </div>
+
+        <template id="TASK_TEMP">
+            <li contenteditable="true" onblur="updateTaskContent(event)" onkeyup="updateTask(event)">
+                <span class="task-label"></span>
+                <span class="task-actions">
+                    <!--✔️❌🗑️ ☒-->
+                    <span class="btn-action toggl" onclick="togglTaskStatus(event)"></span>
+                    <span class="btn-action delete" onclick="deleteTask(event)"></span>
+                </span>
+            </li>
+        </template>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <script src="../scripts/firebase.js"/></script>
+        <script src="../scripts/util.js"/></script>
+        <script src="../scripts/api.js"></script>
+        <script src="../scripts/app.js"></script>
+    </body>
+</html>
