@@ -7,17 +7,54 @@
 
     <body>
         <div class="app-spinner hide">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background: #fff0;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                <circle cx="30" cy="50" fill="#6400e4" r="20">
-                  <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="30;70;30" begin="-0.5s"></animate>
-                </circle>
-                <circle cx="70" cy="50" fill="#ffd500" r="20">
-                  <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="30;70;30" begin="0s"></animate>
-                </circle>
-                <circle cx="30" cy="50" fill="#6400e4" r="20">
-                  <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="30;70;30" begin="-0.5s"></animate>
-                  <animate attributeName="fill-opacity" values="0;0;1;1" calcMode="discrete" keyTimes="0;0.499;0.5;1" dur="1s" repeatCount="indefinite"></animate>
-                </circle>
+             <!--
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transaprent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <defs>
+                    <mask id="ldio-l94j0p085q-mask">
+                    <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                        <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                    </mask>
+                    </defs>
+                    <g mask="url(#ldio-l94j0p085q-mask)"><rect x="20.5" y="0" width="59" height="100" fill="#7a7a7a">
+                    <animate attributeName="fill" values="#7a7a7a" times="0" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                    </rect></g>
+                </svg>
+            -->
+            <!--
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transaprent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <defs>
+                    <mask id="ldio-l94j0p085q-mask">
+                    <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                        <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                    </mask>
+                    </defs>
+                    <g mask="url(#ldio-l94j0p085q-mask)"><rect x="20.5" y="0" width="59" height="100" fill="#464646">
+                    <animate attributeName="fill" values="#464646" times="0" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                    </rect></g>
+                </svg>
+            -->
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background-color: #fff00;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <defs>
+                 <mask id="ldio-tjol6e6adzc-mask">
+                   <circle cx="50" cy="50" r="20" stroke="#fff" stroke-linecap="round" stroke-dasharray="94.24777960769379 31.41592653589793" stroke-width="9">
+                     <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" times="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                   </circle>
+                 </mask>
+                </defs>
+                <g mask="url(#ldio-tjol6e6adzc-mask)"><rect x="20.5" y="0" width="12.6" height="100" fill="#e15b64">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.8s"></animate>
+                </rect><rect x="32.1" y="0" width="12.6" height="100" fill="#f47e60">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.6s"></animate>
+                </rect><rect x="43.7" y="0" width="12.6" height="100" fill="#f8b26a">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.4s"></animate>
+                </rect><rect x="55.3" y="0" width="12.6" height="100" fill="#abbd81">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="-0.2s"></animate>
+                </rect><rect x="66.9" y="0" width="12.6" height="100" fill="#849b87">
+                  <animate attributeName="fill" values="#e15b64;#f47e60;#f8b26a;#abbd81;#849b87" times="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" begin="0s"></animate>
+                </rect></g>
             </svg>
         </div>
         <header class='login'>
@@ -27,11 +64,13 @@
         </header>
         <div class="app-container">
             <div class=app-illustration>
-                <img class="illustration" src="../images/todo-illustration.png"/>
+                <img class="illustration" src="../images/todo-illustration.svg"/>
             </div>
             <div class="form">
-                <div class="text-large text-primary">Change the way you manage Task</div>
-                <div class="text-medium text-neutral">login below to get started</div>
+                <div class="app-slogan-container">
+                    <div class="text-large text-primary">Change the way you manage your Task</div>
+                    <div class="text-medium text-neutral">login below to get started</div>
+                </div>
                 <form class="form-page">
                     <input type="text"  class="cs-input user-email" placeholder="Enter your email"/>
                     <input type="password" class="cs-input user-password" placeholder="Enter your password"/>
