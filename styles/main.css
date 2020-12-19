@@ -219,13 +219,13 @@ div.form {
 }
 
 .form-page {
-    margin: 1em 0;
+    margin: 2em;
     padding: 35px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background:var(--primary-color);
-    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 img.logo {
@@ -251,6 +251,10 @@ div.app-illustration{
     width : 50vw;
     justify-content: center;
     background-color: transparent;
+}
+
+div.app-slogan-container{
+    margin : 0 2em;
 }
 
 header.login {
